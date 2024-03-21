@@ -14,7 +14,11 @@ node {
         }
         stage('Deploy docker'){
             echo "Docker Image Tag Name: ${dockerImageTag}"
-            bat "docker stop springboot-deploy || true && docker rm springboot-deploy || true"
+            bat "@echo off
+            REM Detiene el contenedor Docker y elimina el contenedor incluso si falla
+            docker stop springboot-deploy
+            docker rm springboot-deploy
+            exit /b 0"
             bat "docker run --name springboot-deploy -d -p8083:8083 springboot-deploy:${env.BUILD_NUMBER}"
         }
         stage('Integration test'){
