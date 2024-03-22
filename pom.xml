@@ -110,7 +110,7 @@
 			</plugin>
 		</plugins>
 		<finalName>
-			dockerImg
+			springboot-deploy
 		</finalName>
 	</build>
 </project>
