@@ -17,7 +17,7 @@ node {
             
             // Detener y eliminar el contenedor existente (si existe)
             bat 'docker stop springboot-deploy >NUL 2>&1 || exit /B 0'
-            bat 'docker rm springboot-deploy >NUL 2>&1 || exit /B'
+            bat 'docker rm springboot-deploy >NUL 2>&1 || exit /B 0'
             
             // Ejecutar un nuevo contenedor
             bat "docker run --name springboot-deploy -d -p8083:8083 springboot-deploy:${env.BUILD_NUMBER}"
