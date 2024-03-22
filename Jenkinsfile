@@ -14,7 +14,7 @@ node {
         }
         stage('Deploy docker'){
             echo "Docker Image Tag Name: ${dockerImageTag}"
-            sh 'docker ps -f name=springboot-deploy -q | xargs --no-run-if-empty docker container stop'
+            bat "docker ps -f name=springboot-deploy -q | xargs --no-run-if-empty docker container stop"
             sh 'docker container ls -a -fname=springboot-deploy -q | xargs -r docker container rm'
 
             // bat "docker stop springboot-deploy || true && docker rm springboot-deploy || true"
