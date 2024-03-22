@@ -12,13 +12,15 @@ node {
             // bat "mvn clean package -DskipTests"
             // dockerImage = docker.build("springboot-deploy:${env.BUILD_NUMBER}")
         }
-        stage('Deploy docker'){
+        stage('Deploy docker') {
             echo "Docker Image Tag Name: ${dockerImageTag}"
-            bat "docker ps -f name=springboot-deploy -q | --no-run-if-empty docker container stop"
-            sh 'docker container ls -a -fname=springboot-deploy -q | xargs -r docker container rm'
-
-            // bat "docker stop springboot-deploy || true && docker rm springboot-deploy || true"
-            bat "docker run --name springboot-deploy -d -p8083:8083 springboot-deploy:${env.BUILD_NUMBER}"
+            
+            // Detener y eliminar el contenedor existente (si existe)
+            sh 'docker stop springboot-deploy 2>NUL || true'
+            sh 'docker rm springboot-deploy 2>NUL || true'
+            
+            // Ejecutar un nuevo contenedor
+            sh "docker run --name springboot-deploy -d -p8083:8083 springboot-deploy:${env.BUILD_NUMBER}"
         }
         stage('Integration test'){
             bat "mvn clean test"
