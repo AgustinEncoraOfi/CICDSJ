@@ -20,7 +20,7 @@ node {
             bat 'docker rm springboot-deploy >NUL 2>&1 || exit /B'
             
             // Ejecutar un nuevo contenedor
-            sh "docker run --name springboot-deploy -d -p8083:8083 springboot-deploy:${env.BUILD_NUMBER}"
+            bat "docker run --name springboot-deploy -d -p8083:8083 springboot-deploy:${env.BUILD_NUMBER}"
         }
         stage('Integration test'){
             bat "mvn clean test"
