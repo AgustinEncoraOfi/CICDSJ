@@ -16,8 +16,8 @@ node {
             echo "Docker Image Tag Name: ${dockerImageTag}"
             
             // Detener y eliminar el contenedor existente (si existe)
-            sh 'docker stop springboot-deploy 2>NUL || true'
-            sh 'docker rm springboot-deploy 2>NUL || true'
+            bat 'docker stop springboot-deploy 2>NUL || true'
+            bat 'docker rm springboot-deploy 2>NUL || true'
             
             // Ejecutar un nuevo contenedor
             sh "docker run --name springboot-deploy -d -p8083:8083 springboot-deploy:${env.BUILD_NUMBER}"
