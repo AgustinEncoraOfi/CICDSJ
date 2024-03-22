@@ -14,10 +14,10 @@ node {
         }
         stage('Deploy docker'){
             echo "Docker Image Tag Name: ${dockerImageTag}"
-             if (containerStatus == 'true') {
-                 bat "docker stop springboot-deploy && docker rm springboot-deploy"
-             }
-           
+            sh 'docker ps -f name=springboot-deploy -q | xargs --no-run-if-empty docker container stop'
+            sh 'docker container ls -a -fname=springboot-deploy -q | xargs -r docker container rm'
+
+            // bat "docker stop springboot-deploy || true && docker rm springboot-deploy || true"
             bat "docker run --name springboot-deploy -d -p8083:8083 springboot-deploy:${env.BUILD_NUMBER}"
         }
         stage('Integration test'){
