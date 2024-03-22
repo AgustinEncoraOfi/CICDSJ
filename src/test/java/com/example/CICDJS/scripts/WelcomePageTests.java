@@ -29,7 +29,7 @@ public class WelcomePageTests {
 		baseTest = new BaseTest();
 		this.driver = baseTest.createLocalDriver();
 		baseUtility = new BaseUtility(iTestContext, this.driver);
-		String url = "http://192.168.144.10:8083/";
+		String url = "http://localhost:8083/";
 		baseUtility.navigateTo(url);
 		welcomePage = new WelcomePage(iTestContext,this.driver);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
