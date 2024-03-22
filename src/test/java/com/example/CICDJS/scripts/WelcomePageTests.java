@@ -1,10 +1,10 @@
-package com.encora.demo.scripts;
+package com.example.CICDJS.scripts;
 
 
-import com.encora.demo.Pages.WelcomePage;
-import com.encora.demo.frameworkCore.BaseTest;
-import com.encora.demo.frameworkCore.BaseUtility;
-import com.encora.demo.testUtils.AllureListener;
+import com.example.CICDJS.Pages.WelcomePage;
+import com.example.CICDJS.frameworkCore.BaseTest;
+import com.example.CICDJS.frameworkCore.BaseUtility;
+import com.example.CICDJS.testUtils.AllureListener;
 import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;

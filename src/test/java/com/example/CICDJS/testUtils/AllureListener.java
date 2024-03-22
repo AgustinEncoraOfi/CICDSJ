@@ -1,7 +1,7 @@
-package com.encora.demo.testUtils;
+package com.example.CICDJS.testUtils;
 
 
-import com.encora.demo.frameworkCore.BaseUtility;
+import com.example.CICDJS.frameworkCore.BaseUtility;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

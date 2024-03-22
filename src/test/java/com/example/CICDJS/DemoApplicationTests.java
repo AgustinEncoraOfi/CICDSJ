@@ -1,4 +1,4 @@
-package com.encora.demo;
+package com.example.CICDJS;
 
 import org.testng.annotations.*;
 import org.springframework.boot.test.context.SpringBootTest;

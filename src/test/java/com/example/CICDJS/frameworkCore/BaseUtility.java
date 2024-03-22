@@ -1,4 +1,4 @@
-package com.encora.demo.frameworkCore;
+package com.example.CICDJS.frameworkCore;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

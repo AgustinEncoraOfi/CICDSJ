@@ -1,4 +1,4 @@
-package com.encora.demo.frameworkCore;
+package com.example.CICDJS.frameworkCore;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

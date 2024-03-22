@@ -1,6 +1,6 @@
-package com.encora.demo.Pages;
+package com.example.CICDJS.Pages;
 
-import com.encora.demo.frameworkCore.BaseUtility;
+import com.example.CICDJS.frameworkCore.BaseUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

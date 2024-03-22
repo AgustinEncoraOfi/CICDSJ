@@ -1,4 +1,4 @@
-package com.encora.demo.unitTest;
+package com.example.CICDJS.unitTest;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
