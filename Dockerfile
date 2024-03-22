@@ -1,3 +1,3 @@
 FROM maven:latest
-ADD target/dockerImg.jar dockerImg.jar
-ENTRYPOINT ["java","-jar","/dockerImg.jar"]
+ADD target/springboot-deploy.jar springboot-deploy.jar
+ENTRYPOINT ["java","-jar","/springboot-deploy.jar"]
