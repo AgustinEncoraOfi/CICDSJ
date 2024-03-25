@@ -3,6 +3,6 @@ import App from "./App";
 
 test("App", () => {
   render(<App />);
-  const linkElement = screen.getByText("Welcome to the Encora demo");
+  const linkElement = screen.getByText("Welcome to the Encora demo test");
   expect(linkElement).toBeInTheDocument();
 });
