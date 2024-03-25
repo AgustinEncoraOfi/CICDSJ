@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <h1>Welcome to the Encora demo</h1>
+      <h1>Welcome to the Encora demo test</h1>
     </div>
   );
 }
